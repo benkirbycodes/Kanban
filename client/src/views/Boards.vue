@@ -2,7 +2,7 @@
   <div class="boards container-fluid bg-dark">
     <home-top />
     <div class="row">
-      <div class="col-6">
+      <div class="col-12 p-2 mb-2">
         <div
           class="card card-board bg-dark m-1 text-light"
           v-for="board in boards"
@@ -58,6 +58,12 @@ i {
   border: 1px solid white;
 }
 .boards {
-  height: 100vh;
+  min-height: 100vh;
+}
+.board-title {
+  color: white;
+}
+.board-title:hover {
+  color: grey;
 }
 </style>

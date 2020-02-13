@@ -1,5 +1,5 @@
 <template>
-  <div class="top row pb-5 p-3 bg-dark">
+  <div class="top row mb-3 p-3 bg-dark border-bottom">
     <div class="col-8 mx-auto">
       <router-link to="/">
         <button class="btn btn-outline-light btn-lg">Back To The Boards</button>
