@@ -1,8 +1,8 @@
 <template>
-  <div class="board container-fluid">
+  <div class="board container-fluid bg-dark">
     <top />
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 text-white">
         <h1>{{board.title}}</h1>
         <p>{{board.description}}</p>
       </div>
@@ -65,3 +65,8 @@ export default {
   props: ["boardId"]
 };
 </script>
+<style>
+.board {
+  height: 100vh;
+}
+</style>

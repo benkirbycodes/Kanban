@@ -123,4 +123,7 @@ i {
   height: 180px !important;
   left: 43% !important;
 }
+.list {
+  border: 1px solid white;
+}
 </style>

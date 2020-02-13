@@ -1,19 +1,20 @@
 <template>
-  <div class="top row p-3 bg-dark">
-    <div class="col-6">
+  <div class="top row pb-5 p-3 bg-dark">
+    <div class="col-8 mx-auto">
       <router-link to="/">
         <button class="btn btn-outline-light btn-lg">Back To The Boards</button>
       </router-link>
       <button @click="deleteBoard" class="btn btn-outline-light btn-lg">Delete This Board</button>
+
+      <router-link to="/login">
+        <button @click="resetUser" class="btn btn-outline-light btn-lg">Logout</button>
+      </router-link>
     </div>
-    <div class="col-6">
+    <div class="col-4">
       <form @submit.prevent="addList">
         <input type="text" placeholder="title..." v-model="newList.title" required />
         <button class="btn btn-outline-light btn-lg">Add List</button>
       </form>
-      <router-link to="/login">
-        <button @click="resetUser" class="btn btn-outline-light btn-lg">Logout</button>
-      </router-link>
     </div>
   </div>
 </template>

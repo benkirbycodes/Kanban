@@ -1,12 +1,16 @@
 <template>
-  <div class="boards container-fluid">
+  <div class="boards container-fluid bg-dark">
     <home-top />
     <div class="row">
       <div class="col-6">
-        <div class="card bg-dark m-1 text-light" v-for="board in boards" :key="board._id">
+        <div
+          class="card card-board bg-dark m-1 text-light"
+          v-for="board in boards"
+          :key="board._id"
+        >
           <div class="card-header text-center">
             <router-link :to="{ name: 'board', params: { boardId: board._id } }">
-              <h3 class>{{ board.title }}</h3>
+              <h3 class="board-title">{{ board.title }}</h3>
             </router-link>
             <i @click="deleteBoard(board._id)" class="fa fa-close"></i>
           </div>
@@ -49,5 +53,11 @@ h3 {
 }
 i {
   float: right;
+}
+.card-board {
+  border: 1px solid white;
+}
+.boards {
+  height: 100vh;
 }
 </style>
