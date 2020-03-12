@@ -1,5 +1,5 @@
 <template>
-  <div class="top row mb-3 p-3 bg-dark border-bottom">
+  <div class="top row mb-3 p-3 border-bottom">
     <div class="col-8 mx-auto">
       <router-link to="/">
         <button class="btn btn-outline-light btn-lg">Back To The Boards</button>
@@ -11,8 +11,8 @@
       </router-link>
     </div>
     <div class="col-4">
-      <form @submit.prevent="addList">
-        <input type="text" placeholder="title..." v-model="newList.title" required />
+      <form class="round" @submit.prevent="addList">
+        <input class="round" type="text" placeholder="title..." v-model="newList.title" required />
         <button class="btn btn-outline-light btn-lg">Add List</button>
       </form>
     </div>
@@ -53,4 +53,7 @@ export default {
 </script>
 
 <style>
+.top {
+  background-color: #0c7b93;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="login container-fluid bg-dark text-white">
+  <div class="login container-fluid text-white">
     <div class="row">
       <div class="col-12 p-5">
         <h1>Welcome To Kanban!</h1>
@@ -27,8 +27,8 @@
           <button class="btn btn-outline-light btn-lg m-3" type="submit">Create Account</button>
         </form>
         <div class="action" @click="loginForm = !loginForm">
-          <p v-if="loginForm">No account? Click here to Register</p>
-          <p v-else>Already have an account? Click here to Login</p>
+          <p class="account" v-if="loginForm">No account? Click here to Register</p>
+          <p class="account" v-else>Already have an account? Click here to Login</p>
         </div>
       </div>
     </div>
@@ -75,5 +75,9 @@ export default {
 }
 .login {
   height: 100vh;
+  background-color: #ff8a9c;
+}
+.account:hover {
+  color: black;
 }
 </style>

@@ -1,12 +1,18 @@
 <template>
-  <div class="top row bg-dark p-3 mb-3 border-bottom">
+  <div class="top row p-3 mb-3 border-bottom">
     <div class="col-6">
       <h1 class="text-white">The Boards</h1>
     </div>
     <div class="col-6">
-      <form @submit.prevent="addBoard">
-        <input type="text" placeholder="title" v-model="newBoard.title" required />
-        <input type="text" placeholder="description" v-model="newBoard.description" required />
+      <form class="rounded" @submit.prevent="addBoard">
+        <input class="rounded" type="text" placeholder="title" v-model="newBoard.title" required />
+        <input
+          class="rounded m-1"
+          type="text"
+          placeholder="description"
+          v-model="newBoard.description"
+          required
+        />
         <button class="btn btn-outline-light btn-lg" type="submit">Create Board</button>
       </form>
     </div>
@@ -34,4 +40,7 @@ export default {
 </script>
 
 <style>
+.top {
+  background-color: #27496d;
+}
 </style>
