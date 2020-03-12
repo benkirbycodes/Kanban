@@ -4,15 +4,21 @@
       <router-link to="/">
         <button class="btn btn-outline-light btn-lg">Back To The Boards</button>
       </router-link>
-      <button @click="deleteBoard" class="btn btn-outline-light btn-lg">Delete This Board</button>
+      <button @click="deleteBoard" class="m-1 btn btn-outline-light btn-lg">Delete This Board</button>
 
       <router-link to="/login">
-        <button @click="resetUser" class="btn btn-outline-light btn-lg">Logout</button>
+        <button @click="resetUser" class="m-1 btn btn-outline-light btn-lg">Logout</button>
       </router-link>
     </div>
     <div class="col-4">
       <form class="round" @submit.prevent="addList">
-        <input class="round" type="text" placeholder="title..." v-model="newList.title" required />
+        <input
+          class="round m-1"
+          type="text"
+          placeholder="title..."
+          v-model="newList.title"
+          required
+        />
         <button class="btn btn-outline-light btn-lg">Add List</button>
       </form>
     </div>
@@ -54,6 +60,6 @@ export default {
 
 <style>
 .top {
-  background-color: #0c7b93;
+  background-color: #ff7a00;
 }
 </style>

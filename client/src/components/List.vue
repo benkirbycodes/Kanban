@@ -125,5 +125,8 @@ i {
 }
 .list {
   border: 1px solid white;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #ff8300, #e66e00);
+  box-shadow: 5px 5px 24px #914600, -5px -5px 24px #ffae00;
 }
 </style>

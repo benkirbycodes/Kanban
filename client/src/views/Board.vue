@@ -1,5 +1,5 @@
 <template>
-  <div class="board container-fluid bg-dark">
+  <div class="board container-fluid">
     <top />
     <div class="row">
       <div class="col-12 text-white">
@@ -68,5 +68,6 @@ export default {
 <style>
 .board {
   height: 100vh;
+  background-color: #ff7a00;
 }
 </style>

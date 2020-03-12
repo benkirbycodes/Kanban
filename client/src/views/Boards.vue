@@ -61,12 +61,12 @@ i {
   color: white;
 }
 .board-title:hover {
-  color: grey;
+  color: black;
 }
 .outer-board-title {
   border-radius: 38px;
   background: linear-gradient(145deg, #2a839d, #236e84);
   box-shadow: 5px 5px 24px #164654, -5px -5px 24px #38aed2;
-  /* border: 1px solid white; */
+  border: 1px solid white;
 }
 </style>
