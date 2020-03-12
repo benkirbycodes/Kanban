@@ -75,7 +75,7 @@ export default {
 }
 .login {
   height: 100vh;
-  background-color: #ff8a9c;
+  background-color: #0c7b93;
 }
 .account:hover {
   color: black;

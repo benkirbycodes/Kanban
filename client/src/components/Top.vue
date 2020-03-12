@@ -60,6 +60,6 @@ export default {
 
 <style>
 .top {
-  background-color: #ff7a00;
+  background-color: #27496d;
 }
 </style>

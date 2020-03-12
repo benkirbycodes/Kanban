@@ -124,9 +124,8 @@ i {
   left: 43% !important;
 }
 .list {
-  border: 1px solid white;
-  border-radius: 18px;
-  background: linear-gradient(145deg, #ff8300, #e66e00);
-  box-shadow: 5px 5px 24px #914600, -5px -5px 24px #ffae00;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #2a4e75, #234262);
+  box-shadow: 5px 5px 24px #162a3e, -5px -5px 24px #38689c;
 }
 </style>

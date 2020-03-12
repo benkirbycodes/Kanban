@@ -1,5 +1,5 @@
 <template>
-  <li class="task list-group-item text-dark">
+  <li class="task rounded list-group-item text-dark">
     <h5 class>{{ taskData.description }}</h5>
     <i
       class="fa fa-plus"

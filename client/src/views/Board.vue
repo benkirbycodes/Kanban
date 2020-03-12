@@ -68,6 +68,6 @@ export default {
 <style>
 .board {
   height: 100vh;
-  background-color: #ff7a00;
+  background-color: #0c7b93;
 }
 </style>

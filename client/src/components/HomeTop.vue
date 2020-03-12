@@ -1,6 +1,11 @@
 <template>
-  <div class="top row p-3 mb-3 border-bottom">
-    <div class="col-6">
+  <div class="hometop row p-3 mb-3 border-bottom">
+    <div class="col-1">
+      <router-link to="/login">
+        <button @click="resetUser" class="m-1 btn btn-outline-light btn-lg">Logout</button>
+      </router-link>
+    </div>
+    <div class="col-5">
       <h1 class="text-white">The Boards</h1>
     </div>
     <div class="col-6">
@@ -34,13 +39,16 @@ export default {
     addBoard() {
       this.$store.dispatch("addBoard", this.newBoard);
       this.newBoard = { title: "", description: "" };
+    },
+    resetUser() {
+      this.$store.dispatch("logout");
     }
   }
 };
 </script>
 
 <style>
-.top {
+.hometop {
   background-color: #27496d;
 }
 </style>
