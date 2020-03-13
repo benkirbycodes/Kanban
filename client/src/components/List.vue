@@ -1,9 +1,13 @@
 <template>
   <div class="card list bg-dark text-light">
     <div class="card-header">
-      <h4 class="listTitle">{{ listData.title }}</h4>
-      <i @click="deleteList" class="fa fa-close"></i>
-      <i class="fa fa-plus" @click="showModal"></i>
+      <span class="d-inline-block">
+        <h4 class="listTitle">{{ listData.title }}</h4>
+      </span>
+      <span class="d-inline-block float-right">
+        <i @click="deleteList" class="fa fa-close"></i>
+        <i class="fa fa-plus" @click="showModal"></i>
+      </span>
     </div>
     <ul class="list-group list-group-flush" v-for="(task, i) in tasks" :key="i">
       <task :taskData="task" @passed="passTaskId" />
