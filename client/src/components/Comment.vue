@@ -28,7 +28,6 @@ export default {
   },
   mounted() {
     this.$store.dispatch("getCommentsByTaskId", this.taskId);
-    console.log(this.taskId);
   },
   props: ["taskId", "commentData"],
   computed: {
@@ -47,7 +46,6 @@ export default {
     },
     deleteComment(id) {
       if (confirm("Are You Sure You Want To Delete This Comment?")) {
-        console.log(id);
         this.$store.dispatch("deleteComment", [id, this.taskId]);
       }
     }

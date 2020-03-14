@@ -10,7 +10,11 @@
       </span>
     </div>
     <ul class="list-group list-group-flush" v-for="(task, i) in tasks" :key="i">
-      <task :taskData="task" @passed="passTaskId" />
+      <drop class="drop" @drop="handleDrop(task.id, task.listId)">
+        <drag v-for="task in tasks" :key="task.id">
+          <task :taskData="task" @passed="passTaskId" />
+        </drag>
+      </drop>
     </ul>
 
     <modalTwo :id="'modal' + task.id" :taskData="task" v-for="task in tasks" :key="task._id" />
@@ -40,11 +44,13 @@
 <script>
 import task from "@/components/Task";
 import modalTwo from "@/components/Modal";
+import { Drag, Drop } from "vue-drag-drop";
 
 export default {
   name: "list",
   mounted() {
     this.$store.dispatch("getTasksByListId", this.listData.id);
+    console.log(this.listData.id);
   },
   props: ["listData"],
   data() {
@@ -66,6 +72,10 @@ export default {
         listId: this.listData.id,
         boardId: this.listData.boardId
       };
+    },
+    handleDrop(taskId, listId) {
+      console.log(taskId, listId, this.listData.id);
+      this.$store.dispatch("editTask", [taskId, listId, this.listData.id]);
     },
     deleteList() {
       if (confirm("Are You Sure You Want To Delete This List?")) {
@@ -105,7 +115,9 @@ export default {
   },
   components: {
     task,
-    modalTwo
+    modalTwo,
+    Drag,
+    Drop
   }
 };
 </script>
